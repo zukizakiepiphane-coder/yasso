@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🎁 Pour toi</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="stage" aria-label="Carte cadeau">
+        <div class="fireworks" aria-hidden="true"></div>
+
+        <div class="titles" aria-hidden="true">
+            <div class="titleLine titleLine--top">Yasmine</div>
+            <div class="titleLine titleLine--bottom">Spécialement&nbsp;pour&nbsp;toi</div>
+        </div>
+
+        <div class="gift-wrap" role="button" tabindex="0" aria-label="Ouvrir le cadeau">
+            <div class="gift-emoji" aria-hidden="true">🎁</div>
+            <div class="gift-hint">Clique 🎁</div>
+        </div>
+    </main>
+
+    <section class="modal" id="loveModal" aria-hidden="true">
+        <div class="fireworks fireworks--modal" aria-hidden="true"></div>
+        <div class="modal__backdrop" data-close="true"></div>
+
+        <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="poemTitle">
+            <header class="modal__header">
+                <h1 id="poemTitle">Mon amour</h1>
+            </header>
+
+            <div class="contentGrid">
+                <div class="photos" aria-label="Cercle cadeau">
+                    <div class="circleStage" aria-hidden="true">
+                        <div class="ring" id="ring"></div>
+                        <div class="circle">
+                            <img class="orbitPhoto is-active" src="IMG-20260519-WA0287.jpg" alt="Photo 1" />
+                            <img class="orbitPhoto" src="IMG-20260521-WA0122.jpg" alt="Photo 2" />
+                            <img class="orbitPhoto" src="IMG-20260521-WA0123.jpg" alt="Photo 3" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poem" aria-label="Poème d’amour">
+                    <p class="poemLead">Je te dédie ces mots…</p>
+                    <div class="poemText" id="poemText" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <div class="controls">
+                    <button class="btn" id="soundBtn" type="button">Activer le son</button>
+                    <button class="btn btn--ghost" id="replayBtn" type="button">Revoir l’animation</button>
+                </div>
+                <p class="small">Astuce : clique hors de la carte pour fermer.</p>
+            </div>
+        </div>
+    </section>
+
+    <audio id="audio" preload="auto" loop>
+        <source src="DADJU - Ma woman (Audio Officiel).mp3" type="audio/mpeg" />
+    </audio>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
